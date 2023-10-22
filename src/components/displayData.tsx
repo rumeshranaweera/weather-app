@@ -48,7 +48,7 @@ const DisplayData = () => {
     <>
       {!!data && (
         <div>
-          <div className="w-full mx-auto max-w-screen-sm my-5 bg-white p-10 rounded-xl ring-8 ring-white ring-opacity-40">
+          <div className="w-full mx-auto max-w-screen-sm my-5 bg-white py-10 px-3 xs:px-10 rounded-xl ring-8 ring-white ring-opacity-40">
             <div className="flex justify-between ">
               <div className="flex flex-col">
                 <span className="text-3xl xs:text-6xl font-bold">
