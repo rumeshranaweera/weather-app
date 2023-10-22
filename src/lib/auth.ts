@@ -15,7 +15,7 @@ export const authOptions: NextAuthOptions = {
       // e.g. domain, username, password, 2FA token, etc.
       // You can pass any HTML attribute to the <input> tag through the object.
       credentials: {
-        email: { label: "email", type: "text", placeholder: "Rum" },
+        username: { label: "username", type: "text", placeholder: "Rum" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
@@ -23,7 +23,7 @@ export const authOptions: NextAuthOptions = {
         const user = { id: "1", name: "J Smith", email: "jsmith@example.com" };
 
         if (
-          credentials?.email === process.env.EMAIL &&
+          credentials?.username === process.env.USER_NAME &&
           credentials?.password === process.env.PASSWORD
         ) {
           // Any object returned will be saved in `user` property of the JWT

@@ -26,6 +26,9 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
   const commandRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
+  useEffect(() => {
+    setInput("colombo");
+  }, []);
 
   useOnClickOutside(commandRef, () => {
     setInput("");
