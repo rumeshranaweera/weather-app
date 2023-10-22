@@ -3,7 +3,6 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   const { lat, lon } = await req.json();
-  console.log(lat, lon);
 
   const response = await axios.get(
     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.OPEN_WEATHER}`

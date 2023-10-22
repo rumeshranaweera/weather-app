@@ -58,7 +58,6 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
     queryKey: ["search-query"],
     enabled: false,
   });
-  console.log(queryResults);
   useEffect(() => {
     setInput("");
   }, [pathname]);
