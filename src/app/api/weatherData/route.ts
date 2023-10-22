@@ -6,7 +6,7 @@ export async function POST(req: Request) {
   console.log(lat, lon);
 
   const response = await axios.get(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER}`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.OPEN_WEATHER}`
   );
 
   // Check if response.data contains circular references

@@ -1,6 +1,7 @@
 "use client";
 
 import { signOut } from "next-auth/react";
+import { Button } from "./ui/button";
 
 const Header = () => {
   return (
@@ -8,7 +9,7 @@ const Header = () => {
       <h1 className="text-5xl font-bold capitalize text-sky-500">
         weather app
       </h1>
-      <button onClick={() => signOut()}>Sign out</button>
+      <Button onClick={() => signOut()}>Sign out</Button>
     </div>
   );
 };

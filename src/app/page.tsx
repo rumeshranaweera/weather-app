@@ -7,20 +7,20 @@ type params = { searchParams: { lat: string; lon: string } };
 export default async function Home({ searchParams }: params) {
   return (
     <main className="container mx-auto my-2 space-y-3">
-      <header>
+      <header className="my-10">
         <Header />
       </header>
-      <div>
+      <div className="gird place-items-center">
         <SearchBar />
       </div>
 
       <section>
-        <h2>Display results </h2>
+        <h2 className="font-bold text-2xl sm:text-3xl">Today Weather </h2>
         <DisplayData />
       </section>
 
       <section>
-        <h2>forecast data</h2>
+        <h2 className="font-bold text-2xl sm:text-3xl">forecast data</h2>
         <ForecastData />
       </section>
     </main>

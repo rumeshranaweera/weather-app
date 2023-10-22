@@ -65,11 +65,12 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
   return (
     <Command
       ref={commandRef}
-      className={`relative z-50 max-w-lg overflow-visible border rounded-lg transition ${
+      className={`relative z-50 max-w-lg overflow-visible border rounded-lg transition mx-auto ${
         isInputActive ? "bg-white" : "bg-zinc-100"
       }`}
     >
       <CommandInput
+        isLoading={isFetching}
         onValueChange={(text) => {
           setInput(text);
           debounceRequest();
