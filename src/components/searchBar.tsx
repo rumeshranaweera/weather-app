@@ -102,9 +102,10 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
                   value={location.name}
                 >
                   <MapPin className="w-4 h-4 mr-2" />
-                  {location.name} ,{" "}
+                  {location.name}{" "}
                   <span>
-                    {location.state}, {location.country}
+                    {location.state && <>, {location.state}</>}{" "}
+                    {location.country && <>, {location.country}</>}
                   </span>
                 </CommandItem>
               ))}
